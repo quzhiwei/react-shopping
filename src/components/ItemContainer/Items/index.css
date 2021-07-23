@@ -1,5 +1,16 @@
 .itemImage{
     width:250px;
     height: 250px;
-    border:1px solid red;
+    /*border:1px solid red;*/
+}
+
+.title{
+    font-weight: bold;
+}
+.title > .titleLeft{
+    display: inline-block;
+    width: 175px;
+}
+.title > .titleRight{
+    float:right
 }
