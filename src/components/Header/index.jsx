@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Modal,Button,Input} from 'antd'
+import {Modal,Button,Input,InputNumber} from 'antd'
 import axios from "axios";
 import PubSub from 'pubsub-js'
 import {nanoid} from "nanoid";
@@ -115,7 +115,7 @@ class Header extends Component {
                 <br/>
                 <Input onChange={e=>this.setState({itemTitle:e.target.value})}  placeholder="物品标题"/>
                 <Input onChange={e=>this.setState({itemDescription:e.target.value})} placeholder="物品简介"/>
-                <Input onChange={e=>this.setState({itemPrice:e.target.value})} placeholder="物品价格" prefix="$"/>
+                <InputNumber min={1} max={10} defaultValue={3} onChange={val=>this.setState({itemPrice:val })} placeholder="物品价格" prefix="$"/>
               </Modal>
             </div>}
             {this.state.loginAs === 'user' &&
